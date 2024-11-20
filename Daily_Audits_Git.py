@@ -1,5 +1,4 @@
 import os
-from dotenv import load_dotenv
 import requests
 import datetime
 import pytz
@@ -9,18 +8,15 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-# Load environment variables from .env file
-load_dotenv()
-
 # Azure AD credentials from environment variables
-client_id = os.getenv('CLIENT_ID')
-client_secret = os.getenv('MY_SECRET')
-tenant_id = os.getenv('TENANT_ID')
+client_id = "YOUR CLIENT ID"
+client_secret = os.getenv("YOUR CLIENT SECRET")
+tenant_id = os.getenv("YOUR TENANT ID")
 
 # Email credentials from environment variables
-email_sender = os.getenv('EMAIL_SENDER')
-email_password = os.getenv('EMAIL_PASSWORD')
-email_recipient = os.getenv('EMAIL_RECIPIENT'
+email_sender = "YOUREMAIL@EXAMPLE.COM"
+email_password = "YOUREMAILPASSWORD"
+email_recipient = "RECIPIENTEMAIL@EXAMPLE.COM"
 
 # Mapping of complex app names to simplified versions
 app_name_mapping = {
