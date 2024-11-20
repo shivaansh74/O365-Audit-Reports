@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 import requests
 import datetime
 import pytz
@@ -7,15 +9,18 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-# Azure AD credentials
-client_id = '3f6d1a0b-ded3-475a-a135-98e239c1070f'
-client_secret = '8bP8Q~TLl9RxDXnscwyvwhr6AD-UJpfcIJD4sctD'
-tenant_id = 'aa608900-2b0d-448d-b39c-409f2fe01b6d'
+# Load environment variables from .env file
+load_dotenv()
 
-# Email credentials
-email_sender = 'shivi@datafysystems.com'
-email_password = 'zmrqfjdnsxkscnvd'  # Use your app password if using 2FA
-email_recipient = 'support@datafysystems.com'
+# Azure AD credentials from environment variables
+client_id = os.getenv('CLIENT_ID')
+client_secret = os.getenv('MY_SECRET')
+tenant_id = os.getenv('TENANT_ID')
+
+# Email credentials from environment variables
+email_sender = os.getenv('EMAIL_SENDER')
+email_password = os.getenv('EMAIL_PASSWORD')
+email_recipient = os.getenv('EMAIL_RECIPIENT'
 
 # Mapping of complex app names to simplified versions
 app_name_mapping = {
