@@ -10,8 +10,8 @@ from email.mime.text import MIMEText
 
 # Azure AD credentials from environment variables
 client_id = "YOUR CLIENT ID"
-client_secret = os.getenv("YOUR CLIENT SECRET")
-tenant_id = os.getenv("YOUR TENANT ID")
+client_secret = "YOUR CLIENT SECRET"
+tenant_id = "YOUR TENANT ID"
 
 # Email credentials from environment variables
 email_sender = "YOUREMAIL@EXAMPLE.COM"
